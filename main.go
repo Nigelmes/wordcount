@@ -9,17 +9,12 @@ import (
 )
 
 func main() {
-	vhodnaya_stroka := os.Args[1:]
-	count := WordCountept(vhodnaya_stroka[0])
+	input_str := os.Args[1:]
+	count := WordCountept(input_str[0])
 	fmt.Println(count)
 }
 
 func WordCountept(src string) int {
 	srez := strings.Fields(src)
-	var flag int
-	for _, a := range srez {
-		a = a
-		flag++
-	}
-	return flag
+	return len(srez)
 }
